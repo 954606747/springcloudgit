@@ -1,0 +1,32 @@
+info:
+  name: 统一配置中心
+  version: 0.0.1
+  
+server: 
+  port: 8888
+
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.oschina.net/yanshaohui/configcenter.git
+          username: trolley
+          password: strongpassword
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin123456@127.0.0.1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    
+logging:
+  level:
+    root: info

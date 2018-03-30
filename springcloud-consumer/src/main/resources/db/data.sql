@@ -1,0 +1,17 @@
+insert into user_entity (id, address, age, email,last_password_reset_date,login_account,password,sex, user_name) values (null, '东海桃花岛', 33, 'mcf@taohuadao.com',CURRENT_TIMESTAMP(),'mcf','1','女', '梅超风');
+insert into user_entity (id, address, age, email,last_password_reset_date,login_account,password,sex, user_name) values (null, '蒙古大漠', 33, 'gj@mg.com',CURRENT_TIMESTAMP(),'gj','1','男', '郭靖');
+insert into user_entity (id, address, age, email,last_password_reset_date,login_account,password,sex, user_name) values (null, '西域白驼山', 33,'oyf@bts.com',CURRENT_TIMESTAMP(),'oyf','1', '男', '欧阳锋');
+insert into user_entity (id, address, age, email,last_password_reset_date,login_account,password,sex, user_name) values (null, '浙江嘉兴', 33, 'hqg@gai.com',CURRENT_TIMESTAMP(),'hqg','1','男', '洪七公');
+insert into user_entity (id, address, age, email,last_password_reset_date,login_account,password,sex, user_name) values (null, '东海桃花岛', 33,'hr@taohuadao.com',CURRENT_TIMESTAMP(),'hr','1', '女', '黄蓉');
+insert into user_entity (id, address, age, email,last_password_reset_date,login_account,password,sex, user_name) values (null, '云南大理', 33,'yd@dali.com',CURRENT_TIMESTAMP(),'yd','1', '男', '一灯');
+insert into role_entity (role_id,role_name,description) values ('ADMIN','超级管理员','超级管理员角色描述');
+insert into role_entity (role_id,role_name,description) values ('MNG','管理员','管理员角色描述');
+insert into role_entity (role_id,role_name,description) values ('COMMON','普通用户','普通用户角色描述');
+insert into role_entity (role_id,role_name,description) values ('FRIEND','合作伙伴','合作伙伴角色描述');
+insert into user_role_entity (id,user_id,role_id) values (null,1,'ADMIN');
+insert into user_role_entity (id,user_id,role_id) values (null,1,'FRIEND');
+insert into user_role_entity (id,user_id,role_id) values (null,2,'COMMON');
+insert into user_role_entity (id,user_id,role_id) values (null,2,'MNG');
+insert into user_role_entity (id,user_id,role_id) values (null,3,'MNG');
+insert into user_role_entity (id,user_id,role_id) values (null,4,'FRIEND');
+insert into user_role_entity (id,user_id,role_id) values (null,5,'COMMON');

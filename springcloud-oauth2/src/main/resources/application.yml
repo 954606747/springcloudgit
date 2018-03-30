@@ -1,0 +1,28 @@
+info:
+  name: OAuth2.0身份验证服务器
+  version: 0.0.1
+
+server: 
+  port: 9999
+  contextPath: /authServer
+  
+management:
+  security:
+    enabled: false
+
+security:
+  oauth2:
+    client:
+      authorized-grant-types: authorization_code,refresh_token,password
+      client-id: consumer01
+      client-secret: 33b17e044ee6a4fa383f46ec6e28ea1d
+      scope: read,write
+      token-name: mytoken
+  user:
+    name: user
+    password: user123
+
+logging:
+  level:
+    root: info
+    com.yanshaohui.springcloud: trace

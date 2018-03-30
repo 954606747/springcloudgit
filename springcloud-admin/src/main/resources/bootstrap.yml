@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: admin
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        service-id: config-server
+        enabled: true
+      label: master
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin123456@localhost:8761/eureka/
+    register-with-eureka: false
+  instance:
+    prefer-ip-address: true

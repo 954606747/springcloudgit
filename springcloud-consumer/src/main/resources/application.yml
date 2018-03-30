@@ -1,0 +1,63 @@
+info:
+  name: 服务消费者(验证用)
+  version: 0.0.1
+
+server: 
+  port: 8081
+
+management:
+  security:
+    enabled: false
+  context-path: /svmng/
+#  port: 3081
+  
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: topic-01
+          binder: rabbit_default
+      binders:
+        rabbit_default:
+          type: rabbit
+          environment:
+            spring: 
+              rabbitmq:
+                host: 192.168.123.132
+                port: 5672
+                username: user
+                password: user123
+                virtual-host: /async_provider01
+  datasource:
+    url: jdbc:h2:mem:test
+    driver-class-name: org.h2.Driver
+    username: root
+    password: 123456
+    data: #########初始化数据脚本
+    - classpath:db/data.sql
+  jpa:
+    show-sql: true
+    database: H2
+  h2: #######开启H2 Web控制台###############
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true #允许远程查询
+      path: /h2
+
+# JWT
+jwt:
+  header: Authorization
+  secret: SpringCloudWithJwt
+  expiration: 604800
+  tokenHead: "Bearer "
+
+#自定义属性
+ysh:
+  testValue: inner yaml
+
+logging:
+  level:
+    root: info
+    com.yanshaohui.springcloud: trace

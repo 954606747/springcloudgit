@@ -1,0 +1,25 @@
+info:
+  name: API网关
+  version: 0.0.1
+
+server: 
+  port: 8080
+
+management:
+  security:
+    enabled: false
+
+zuul:
+  ignored-services: "*"
+  routes:
+    consumer01:
+      path: /c/**
+      serviceId: CONSUMER01 
+      stripPrefix: true
+    baidu: 
+      path: /b/**
+      url: http://www.baidu.com
+    
+logging:
+  level:
+    root: info

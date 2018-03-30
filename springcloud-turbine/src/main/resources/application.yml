@@ -1,0 +1,19 @@
+info:
+  name: Turbine聚合Hystrix监控
+  version: 0.0.1
+  
+server: 
+  port: 8180
+
+management:
+  security:
+    enabled: false
+
+turbine:
+  app-config: gateway,provider01,consumer01
+  cluster-name-expression: new String("default")
+
+logging:
+  level:
+    root: info
+    com.yanshaohui.springcloud: trace

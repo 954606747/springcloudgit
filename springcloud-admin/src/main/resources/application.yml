@@ -1,0 +1,15 @@
+info:
+  name: 服务治理工具
+  version: 0.0.1
+
+server: 
+  port: 8182
+
+management:
+  security:
+    enabled: false
+    
+logging:
+  level:
+    root: info
+    com.yanshaohui.springcloud: trace

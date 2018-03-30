@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: provider01
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        service-id: config-server
+        enabled: true
+      label: master
+  zipkin:
+    base-url: http://192.168.123.132:9411/
+    locator:
+      discovery:
+        enabled: true
+    service:
+      name: provider01 #zipkin
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.123.132:8761/eureka/
+  instance:
+    prefer-ip-address: true

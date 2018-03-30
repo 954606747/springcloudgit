@@ -1,0 +1,33 @@
+info:
+  name: Eureka服务注册中心
+  version: 0.0.1
+  
+server: 
+  port: 8761
+
+    
+spring:
+  application:
+    name: eureka-register-server
+
+security:
+  basic: 
+    enabled: true
+  user:
+    name: admin
+    password: admin123456
+    
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin123456@${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: true
+
+logging:
+  level:
+    root: info

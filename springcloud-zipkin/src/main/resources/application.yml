@@ -1,0 +1,15 @@
+info:
+  name: 服务链路追踪
+  version: 0.0.1
+
+server: 
+  port: 9411
+
+management:
+  security:
+    enabled: false
+    
+logging:
+  level:
+    root: info
+    com.yanshaohui.springcloud: trace

@@ -1,0 +1,39 @@
+info:
+  name: 服务提供者(验证用)
+  version: 0.0.1
+
+server: 
+  port: 9081
+
+management:
+  security:
+    enabled: false
+
+#spring:
+#  application:
+#    name: provider01
+#  cloud:
+#    config:
+#      enabled: true
+#      discovery:
+#        service-id: provider01
+#        enabled: true
+#      label: master
+#  zipkin:
+#    locator:
+#      discovery:
+#        enabled: true
+#    service:
+#      name: provider01
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:8761/eureka/
+#  instance:
+#    prefer-ip-address: true
+    
+logging:
+  level:
+    root: info
+    com.yanshaohui.springcloud: trace
