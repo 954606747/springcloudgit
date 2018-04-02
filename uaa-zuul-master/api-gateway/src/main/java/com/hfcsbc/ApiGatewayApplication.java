@@ -16,5 +16,6 @@ public class ApiGatewayApplication {
 		SpringApplication.run(ApiGatewayApplication.class, args);
 		System.out.println("网关启动完毕....");
 		System.out.println("网关启动完毕。。。。");
+		System.out.println("网关启动完毕....666666");
 	}
 }
