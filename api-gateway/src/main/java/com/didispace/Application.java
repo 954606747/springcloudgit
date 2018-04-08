@@ -13,9 +13,9 @@ public class Application {
 
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(Application.class).web(true).run(args);
-		System.out.println(">>>网关启动");
-		System.out.println(">>>网关启动");
-		System.out.println(">>>网关启动");
+		System.out.println(">>>网关启动11");
+		System.out.println(">>>网关启动22");
+		System.out.println(">>>网关启动33");
 	}
 
 	@Bean
